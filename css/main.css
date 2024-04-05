@@ -1,0 +1,593 @@
+@import "./reset.css";
+
+@font-face {
+    font-family: "Cygre";
+    font-style: bold;
+    font-weight: 700;
+    
+    src: url("../fonts/Cygre-Bold.ttf");
+        
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@400;500;700;800&display=swap&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+html, body{
+    font-family:'DM Sans','Cygre' sans-serif;
+    letter-spacing:  -0.5px;
+    color: #171718;
+    
+}
+
+
+
+.container{
+    margin:0 auto;
+    padding:0 15px;
+    max-width: 1200px;
+}
+
+/* Nav */
+
+.nav{
+    padding: 20px 0;
+    border-bottom: 1px solid #26292D;
+    background-color: #171718; 
+    color: #FFF;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;   
+    left: 0;   
+    z-index: 9999;   
+    width: 100%;   
+    height: 50px;
+    align-content: center;
+    
+}
+
+.nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap:20px;
+    flex-wrap: wrap;
+    margin-right: -10em;
+}
+
+.logo{
+    color: #FFF;
+    font-size: 24px;
+    font-family: "Popins", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    transition: 0.5s ease-in-out
+}
+.logo:hover {
+    color: #F88BE6; /* Цвет текста */
+}
+
+
+
+.logo strong{
+    font-family: "Anonymous+Pro", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing:  0.1em;
+}
+
+
+.nav-list{
+    display: flex;
+    text-align: right;
+    column-gap: 35px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Cygre", sans-serif;
+    text-decoration: none;
+
+}
+
+.nav-list__link {
+	color: #fff; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.nav-list__link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px; /* Высота линии */
+    background-color: #F88BE6; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s, left 0.5s; /* Время эффекта */
+    transform: translateX(  0%);
+}
+
+.nav-list__link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px; /* Высота линии */
+    background-color: #F88BE6; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s, left 0.5s;  /* Время эффекта */
+    
+}
+     
+
+/* Header */
+
+.header{
+    padding: 20px 0;
+    min-height: 870px;
+
+    background-color: #171718;
+    background-image: url("./../img/circle.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.header__wrapper{
+    padding: 0 15px;
+    max-width: 955px;
+}
+
+.header__title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    
+}
+
+.header__title strong{
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.header__title em{
+    font-style: 800;
+    color:#F88BE6
+}
+
+.header__title em1{
+    font-family: "Cygre", sans-serif;
+    font-style: 700;
+    font-size: 40px;
+    vertical-align: top;
+
+}
+.header__text{
+    font-size: 18px;
+    line-height: 1.333;
+}
+
+/*Обо мне*/
+
+.main_container {
+    margin-left: auto;
+    margin-right: auto ;
+    display: flex;
+    justify-content: space-between; /* Выравниваем по горизонтали */
+    align-items: center; /* Выравниваем по вертикали */
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    width: 100%; /* Чтобы контейнер занимал всю доступную ширину */
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.main_container_low {
+    margin-left: auto;
+    margin-right: auto ;
+    display: flex;
+    justify-content: space-between; /* Выравниваем по горизонтали */
+    align-items: center; /* Выравниваем по вертикали */
+    max-width: 1000px; /* Максимальная ширина контейнера */
+    width: 100%; /* Чтобы контейнер занимал всю доступную ширину */
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.image {
+    width: 450px; /* Ширина изображения */
+    height: auto; /* Высота автоматически рассчитывается для поддержания пропорций */
+    margin-right: 20px; /* Отступ справа */
+    border-radius: 15px; /* Задаем радиус скругления углов */
+    display: block;
+}
+
+.text{
+    align-tracks: left;
+    line-height: 2;
+
+}
+
+.text p{
+    color:#000000;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:60px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    letter-spacing:-0.5px;
+    line-height:129.99999523162842px;
+    border-style:hidden;
+    outline:none;
+    width:460px;
+    border-bottom: 35px;
+}
+
+.text li{
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    vertical-align: top;
+    color: #C20F90
+}
+
+.text strong{
+    font-family: "Cygre", sans-serif;
+    font-style: 700;
+    font-size: 24px;
+    vertical-align: top;
+    color: #000000
+}
+
+
+
+.text_low strong{
+    font-family: "Cygre", sans-serif;
+    font-style: 700;
+    font-size: 24px;
+    vertical-align: top;
+    color: #000000
+}
+
+.text_low name{
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    
+    color: #C20F90
+}
+
+.text_low{
+   
+    max-width: 500px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    vertical-align: top;
+    color: #000000
+}
+
+/*Биография*/
+
+.section{
+    padding: 70px 0;
+}
+
+.title-1{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #F88BE6;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+
+.biography{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding-top: 45px;
+    padding-bottom: 20px;
+    
+    
+
+}
+
+.biography__text{
+    flex: 1;
+    font-size: 26px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 400;
+    
+    
+    
+    
+}
+
+.biography__text strong{
+    color: #C20F90;
+}
+
+.image_bio {
+    height: 600px; /* Ширина изображения */
+    width: auto; /* Высота автоматически рассчитывается для поддержания пропорций */
+    margin-left: 50px; /* Отступ справа */
+    border-radius: 15px; /* Задаем радиус скругления углов */
+    display: block;
+    
+}
+  
+.title-2{
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: "Cygre", sans-serif;
+
+}
+
+a{ 
+    color:#171718
+
+}
+
+.content-list{
+    margin: 0 auto;
+    min-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 40px;
+
+}
+
+
+.content-list__item{
+    font-size: 20px;
+    line-height: 1.5
+    
+}
+
+
+
+
+.content-list__item p{
+    margin-top: 0.5em;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:18px;
+    font-family: "Anonymous+Pro", sans-serif;
+    letter-spacing:-0.5px;
+    width:570px;
+}
+
+
+
+/* Регистрация */
+
+
+.section_reg{
+    padding: 10px;
+}
+
+.block {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translate(-25%, 50%);
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    width: 600px; /* Ширина первого прямоугольника */   
+    margin: -150px;
+}  
+
+.block-one {
+    width: 595px; /* Ширина первого прямоугольника */
+    height: 87px; /* Высота первого прямоугольника */
+    border-radius: 100px;
+    border: 3px solid #F88BE6; /* Обводка */
+    position: relative; /* Позиционирование внутри блока */
+    padding-left: 300px; /* Отступ слева */
+}
+
+
+
+.block-two {
+    width: 253px; /* Ширина второго прямоугольника */
+    height: 87px; /* Высота второго прямоугольника */
+    background: #F88BE6;
+    position: relative; /* Абсолютное позиционирование */
+    border: 3px solid #F88BE6; /* Обводка */
+    border-radius: 100px;
+    left: 50%; /* Позиционируем левый край блока на 50% ширины окна */
+    transform: translate(-125%, -100%); /* Сдвигаем блок на -50% его собственной ширины и высоты, чтобы центрировать его */
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень с отступом */
+}
+
+.block-two span {
+    position: absolute; /* Абсолютное позиционирование для текста */
+    top: 50%; /* Располагаем текст по центру вертикали */
+    left: 50%; /* Располагаем текст по центру горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем текст на -50% его собственной высоты и ширины, чтобы центрировать его */
+    color: #FFF; /* Цвет текста */
+    font-size: 20px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+}
+
+
+
+.block-three {
+    width: 360px; /* Ширина второго прямоугольника */
+    height: 87px; /* Высота второго прямоугольника */
+    border: 4px solid #F88BE6; /* Обводка */
+    position: relative; /* Абсолютное позиционирование */
+    right: 0;  /* Располагаем по центру вертикали */
+    text-align: center; /* Центрируем содержимое по горизонтали */
+    border-radius: 100px;
+    left: 50%; /* Позиционируем левый край блока на 50% ширины окна */
+    transform: translate(-18%, -200%); /* Сдвигаем блок на -50% его собственной ширины и высоты, чтобы центрировать его */
+}
+
+.section_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Растягиваем контейнер на всю высоту экрана */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    line-height: 50px;
+    color:#F88BE6;
+    font-size: 20px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    color:#F88BE6;
+    font-size: 20px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    text-align: center;
+    margin-top: 15px; /* Добавляем отступ сверху */
+}
+
+.button {
+    width: 400px; /* Ширина кнопки */
+    height: 87px; /* Высота кнопки */
+    border-radius: 100px;
+    color: white;
+    font-size: 24px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    transition: .2s linear;
+    background: #F88BE6;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    margin-bottom: -100px;
+    border: 3px solid #F88BE6; /* Обводка */
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень с отступом */
+}
+
+.button:hover {
+    transform: translate(0,-3px);
+    box-shadow: 0 20px 40px 0 #F88BE6;
+    cursor: pointer;
+}
+
+/* Стили для оверлея */
+
+ #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+    z-index: 9999; /* Устанавливаем высокий z-index, чтобы оверлей был поверх других элементов */
+}
+
+#message-container {
+    border-radius: 100px;
+    color: white;
+    font-size: 24px;
+    font-family: "Anonymous+Pro", sans-serif;
+    font-weight: 400;
+    letter-spacing:-0.5px;
+    transition: .2s linear;
+    background: #F88BE6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%; /* Ширина окошка */
+    max-width: 500px; /* Максимальная ширина окошка */
+    height: auto; /* Высота окошка автоматическая, в зависимости от содержимого */
+}
+
+
+/* Добавляем класс для элементов, которые будут появляться при прокрутке */
+.image,
+.text,
+.text_low {
+    opacity: 0; /* Начальное значение прозрачности */
+    transform: translateY(30px); /* Смещение по оси Y для плавного появления */
+    transition: opacity 0.85s ease-out, transform 0.85s ease-out; /* Добавляем переход для плавного эффекта */
+}
+
+/* Добавляем класс show, который будет применяться к элементам при прокрутке и активировать анимацию */
+.image.show,
+.text.show,
+.text_low.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Footer */
+
+.footer {
+    background-color: #171718;
+    padding: 60px 0 50px;
+    color: #fff;
+    text-align: center; /* Центрирование содержимого */
+    
+}
+
+.footer__wraper {
+    display: inline-block;
+}
+
+.social {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    column-gap: 50px;
+    align-items: center;
+}
+
+.social__item img {
+    width: 40px;
+    height: auto;
+}
+
+/* Стили для анимации */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+   
